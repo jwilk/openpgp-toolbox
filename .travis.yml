@@ -1,0 +1,14 @@
+dist: xenial
+sudo: true
+language: generic
+install:
+- python -m pip install --user pygments restructuredtext-lint
+before_script:
+- PATH="$PWD:$PATH"
+script:
+- shellcheck wkd-url
+- wkd-url --help
+- wkd-url Joe.Doe@example.org jwilk@jwilk.net
+- restructuredtext-lint --encoding=UTF-8 README
+
+# vim:ts=2 sts=2 sw=2 et
