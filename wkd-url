@@ -5,6 +5,21 @@
 
 set -e -u
 
+usage()
+{
+    printf 'Usage: %s ADDRESS [ADDRESS...]\n' "${0#**/}"
+}
+
+if [ $# -eq 0 ] || ( [ "${1#-}" != "$1" ] && [ "${1#*@}" = "${1}" ] )
+then
+    usage >&2
+    exit 1
+elif [ "$1" = '-h' ] || [ "$1" = '--help' ]
+then
+    usage
+    exit
+fi
+
 for addr in "$@"
 do
     user=${addr%@*}
