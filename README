@@ -1,0 +1,13 @@
+wkd-url
+=======
+
+.. code:: console
+
+   $ wkd-url --help
+   Usage: wkd-url ADDRESS [ADDRESS...]
+
+   $ wkd-url Joe.Doe@example.org jwilk@jwilk.net
+   https://example.org/.well-known/openpgpkey/hu/iy9q119eutrkn8s1mk4r39qejnbu3n5q
+   https://jwilk.net/.well-known/openpgpkey/hu/je6qitbsqifya391hyc65ts9ktd4qisd
+
+.. vim:ft=rst ts=3 sts=3 sw=3 et
