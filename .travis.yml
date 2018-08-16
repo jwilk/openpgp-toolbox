@@ -6,7 +6,9 @@ install:
 before_script:
 - PATH="$PWD:$PATH"
 script:
-- shellcheck wkd-url
+- shellcheck *-*
+- gpg-batch-revoke --help
+- gpg-pretty-expire --help
 - wkd-url --help
 - wkd-url Joe.Doe@example.org jwilk@jwilk.net
 - restructuredtext-lint --encoding=UTF-8 README
