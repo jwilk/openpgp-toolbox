@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Copyright © 2018 Jakub Wilk <jwilk@jwilk.net>
+# SPDX-License-Identifier: MIT
+
+set -e -u
+
+usage()
+{
+    printf 'Usage: %s KEYID\n' "${0#**/}"
+}
+
+if [ $# -ne 1 ]
+then
+    usage >&2
+    exit 1
+fi
+arg="$1"
+if [ "$arg" = '-h' ] || [ "$arg" = '--help' ]
+then
+    usage
+    exit 0
+fi
+
+printf 'y\n1\n\ny\n' \
+| gpg --command-fd 0 --status-fd 2 --gen-revoke "$arg"
+
+# vim:ts=4 sts=4 sw=4 et
