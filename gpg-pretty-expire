@@ -25,9 +25,10 @@ keyid="$1"
 if [ $# -eq 1 ]
 then
     year=$(date '+%Y')
+    year=$((year + 1))
 else
     year="$2"
 fi
-exec faketime -f "$year-10-01 12:00:00" gpg --quick-set-expire "$keyid" "$((year + 1))-01-01"
+exec faketime -f "$((year - 1))-10-01 12:00:00" gpg --quick-set-expire "$keyid" "$((year + 1))-01-01"
 
 # vim:ts=4 sts=4 sw=4 et
