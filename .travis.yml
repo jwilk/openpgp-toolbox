@@ -1,5 +1,4 @@
 dist: xenial
-sudo: true
 language: generic
 install:
 - python -m pip install --user pygments restructuredtext-lint
