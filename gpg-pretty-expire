@@ -12,7 +12,7 @@ usage()
 
 export TZ=Etc/GMT-12
 
-if [ $# -eq 1 ] && ( [ "$1" = '-h' ] || [ "$1" = '--help' ] )
+if [ $# -eq 1 ] && { [ "$1" = '-h' ] || [ "$1" = '--help' ]; }
 then
     usage
     exit
