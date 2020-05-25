@@ -9,7 +9,7 @@ prog="$pdir/gpg-pretty-expire"
 echo 1..1
 out=$("$prog" --help)
 sed -e 's/^/# /' <<< "$out"
-if [[ $out = 'Usage: '*/'gpg-pretty-expire KEYID [YEAR]' ]]
+if [[ $out = 'Usage: gpg-pretty-expire KEYID [YEAR]' ]]
 then
     echo 'ok 1'
 else

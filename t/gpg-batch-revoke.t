@@ -9,7 +9,7 @@ prog="$pdir/gpg-batch-revoke"
 echo 1..1
 out=$("$prog" --help)
 sed -e 's/^/# /' <<< "$out"
-if [[ $out = 'Usage: '*/'gpg-batch-revoke KEYID' ]]
+if [[ $out = 'Usage: gpg-batch-revoke KEYID' ]]
 then
     echo 'ok 1'
 else

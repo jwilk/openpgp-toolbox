@@ -9,7 +9,7 @@ prog="$pdir/wkd-url"
 echo 1..2
 out=$("$prog" --help)
 sed -e 's/^/# /' <<< "$out"
-if [[ $out = 'Usage: '*/'wkd-url ADDRESS [ADDRESS...]' ]]
+if [[ $out = 'Usage: wkd-url ADDRESS [ADDRESS...]' ]]
 then
     echo 'ok 1'
 else
