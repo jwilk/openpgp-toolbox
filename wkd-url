@@ -7,7 +7,7 @@ set -e -u
 
 usage()
 {
-    printf 'Usage: %s ADDRESS [ADDRESS...]\n' "${0#**/}"
+    printf 'Usage: %s ADDRESS [ADDRESS...]\n' "${0##*/}"
 }
 
 if [ $# -eq 1 ] && { [ "$1" = '-h' ] || [ "$1" = '--help' ]; }

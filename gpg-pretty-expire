@@ -7,7 +7,7 @@ set -e -u
 
 usage()
 {
-    printf 'Usage: %s KEYID [YEAR]\n' "${0#**/}"
+    printf 'Usage: %s KEYID [YEAR]\n' "${0##*/}"
 }
 
 export TZ=Etc/GMT-12
